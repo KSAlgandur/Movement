@@ -87,7 +87,7 @@
      <rect>
       <x>730</x>
       <y>120</y>
-      <width>58</width>
+      <width>81</width>
       <height>18</height>
      </rect>
     </property>
@@ -108,6 +108,45 @@
      <string>Угол</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>290</y>
+      <width>81</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X               Y</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="radX">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>320</y>
+      <width>31</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>200</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="radY">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>320</y>
+      <width>31</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>300</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -115,7 +154,7 @@
      <x>0</x>
      <y>0</y>
      <width>891</width>
-     <height>30</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

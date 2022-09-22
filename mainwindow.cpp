@@ -30,7 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->graphicsView->setRenderHint(QPainter::Antialiasing);
 
     // создаём картинку с фоном, будем использовать её как текстуру
-    int imgSize = 400; // размер картинки
+    int imgSize = 800; // размер картинки
     img = new QImage(imgSize,imgSize,QImage::Format_RGB16);
     QPainter painter(img); // рисовальщик
     painter.setPen(Qt::NoPen); // будем рисовать без контура
@@ -69,13 +69,14 @@ void MainWindow::move()
 void MainWindow::showEvent(QShowEvent *)
 {
     // начальное положение тела
-    r.x = rad; r.y = rad;
+    r.x = ui->radX->text().toDouble();
+    r.y = ui->radY->text().toDouble();
 // задаём область графической сцены
-    scene->setSceneRect(0,0,ui->graphicsView->height()-2,
-    ui->graphicsView->height()-2);
+    scene->setSceneRect(0,0,ui->graphicsView->height(),
+    ui->graphicsView->height());
     ui->graphicsView->setScene(scene);
     // устанавливаем в качестве фона изображение img
-    bgr = img->scaledToHeight(ui->graphicsView->height());
+    bgr = img->scaledToHeight(ui->graphicsView->height()+40);
     bgr_clear = img->scaledToHeight(ui->graphicsView->height());
     scene->setBackgroundBrush(bgr);
     // создание и настройка рисовальщика траектории
